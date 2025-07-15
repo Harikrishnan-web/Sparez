@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Sparez | Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+        body { background: #f9f9f9; color: #333; }
+
+        header {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/10;
+            background: url('4.jpg') center center/cover no-repeat;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            color: white;
+            flex-direction: column;
+        }
+
+        header .logo {
+            align-self: flex-start;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: auto;
+            z-index: 2;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover { color: #61dafb; }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            z-index: 2;
+        }
+
+        @media(max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0,0,0,0.9);
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+                z-index: 1;
+            }
+
+            nav.active { display: flex; }
+            nav ul { flex-direction: column; gap: 15px; }
+            .menu-toggle { display: block; }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-grow: 1;
+            z-index: 1;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+        }
+
+        .hero-content h1 { font-size: 2.8rem; margin-bottom: 15px; }
+        .hero-content p { font-size: 1.2rem; max-width: 700px; margin-bottom: 25px; }
+
+        section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; color: #20232a; }
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .reason {
+            background: #f4f8fb;
+            border-radius: 12px;
+            padding: 25px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .reason:hover { transform: translateY(-10px); }
+
+        .reason h3 { font-size: 1.3rem; color: #0077ff; margin-bottom: 10px; }
+        .reason p { font-size: 1rem; color: #555; }
+
+        form {
+            background: #f4f8fb;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        form label { display: block; font-weight: bold; margin-bottom: 5px; margin-top: 20px; }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            background: #0077ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        form button:hover { background: #005fcc; }
+
+        .contact-info {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Sparez</div>
+     
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About us.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hero-content">
+        <h1>Contact Us</h1>
+        
+    </div>
+</header>
+
+
+<section>
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+        <p><strong>Location:</strong> [Enter your city or headquarters address]</p>
+        <p><strong>Phone:</strong> +91-63826 02550</p>
+        <p><strong>Email:</strong> <a href="mailto:kishoreseervi04042006@gmail.com">kishore@sparez.in</a></p>
+    </div>
+
+    <form action="#" method="POST">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="garage">Garage Name*</label>
+        <input type="text" id="garage" name="garage" required>
+
+        <label for="contact">Contact Number*</label>
+        <input type="tel" id="contact" name="contact" required>
+
+        <label for="city">City*</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit"><a href="mailto:kishoreseervi04042006@gmail.com">Submit</a></button>
+    </form>
+</section>
+<!-- Footer Section -->
+<footer style="background-color: #222; color: white; padding: 40px 20px; font-family: Arial, sans-serif;">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; max-width: 1200px; margin: 0 auto;">
+
+        <!-- Menu Section -->
+        <div style="margin: 20px;">
+            <h3 style="color: #ff6600;">Menu</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;"><a href="Home.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ff6600';" onmouseout="this.style.color='white';">Home</a></li>
+                <li style="margin: 10px 0;"><a href="About us.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ff6600';" onmouseout="this.style.color='white';">About us</a></li>
+                <li style="margin: 10px 0;"><a href="Services.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ff6600';" onmouseout="this.style.color='white';">Services</a></li>
+                <li style="margin: 10px 0;"><a href="contact.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ff6600';" onmouseout="this.style.color='white';">Contact US</a></li>
+            </ul>
+        </div>
+
+        <!-- Credits Section -->
+        <div style="margin: 20px;">
+            <h3 style="color: #ff6600;">Credits</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;">ATHARVA SALUNKHE SATISH</li>
+                <li style="margin: 10px 0;">V kishore</li>
+              
+            </ul>
+        </div>
+
+        <!-- Social or Additional Section (Optional) -->
+        <div style="margin: 20px;">
+            <h3 style="color: #ff6600;">Connect</h3>
+            <p>Email: kishoreseervi04042006@gmail.com</p>
+            <p>Phone: +91-63826 02550</p>
+        </div>
+
+    </div>
+
+    <p style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: #aaa;">&copy; 2025 Sparez. All rights reserved.</p>
+
+</footer>
+
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

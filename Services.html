@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Sparez</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/10;
+            background: url('3.jpg') center center/cover no-repeat;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            color: white;
+            flex-direction: column;
+        }
+
+        header .logo {
+            align-self: flex-start;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: auto;
+            z-index: 2;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #61dafb;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            z-index: 2;
+        }
+
+        @media(max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0,0,0,0.9);
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+                z-index: 1;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-grow: 1;
+            z-index: 1;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 25px;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #20232a;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #f4f8fb;
+            border-radius: 12px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: #0077ff;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #20232a;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .service-card ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Sparez </div>
+    
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About us.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="hero-content">
+        <h1>Our Services</h1>
+        <p>We help your garage run faster and smarter with our dedicated service solutions.</p>
+    </div>
+</header>
+
+<section class="services-section">
+    <h2>What We Offer</h2>
+    <div class="service-cards">
+
+        <div class="service-card">
+            <i class="fas fa-truck-fast"></i>
+            <h3>Fast Spare Parts Delivery</h3>
+            <ul>
+                <li>Same-day or within-hours delivery</li>
+                <li>Warehouses in every major city</li>
+                <li>For two-wheelers & four-wheelers</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Garage Management System</h3>
+            <ul>
+                <li>Digital invoicing & billing</li>
+                <li>Inventory and service tracking</li>
+                <li>Automated customer reminders</li>
+                <li>Cloud access across devices</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-network-wired"></i>
+            <h3>Garage & Vendor Network</h3>
+            <ul>
+                <li>Connect with verified sellers</li>
+                <li>Ensure spare part availability</li>
+                <li>Compare prices in real time</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!-- Footer Section -->
+<footer style="background-color: #222; color: white; padding: 40px 20px; font-family: Arial, sans-serif;">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; max-width: 1200px; margin: 0 auto;">
+
+        <!-- Menu Section -->
+        <div style="margin: 20px;">
+            <h3 style="color: #ff6600;">Menu</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;"><a href="Home.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ff6600';" onmouseout="this.style.color='white';">Home</a></li>
+                <li style="margin: 10px 0;"><a href="About us.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ff6600';" onmouseout="this.style.color='white';">About us</a></li>
+                <li style="margin: 10px 0;"><a href="Services.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ff6600';" onmouseout="this.style.color='white';">Services</a></li>
+                <li style="margin: 10px 0;"><a href="contact.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ff6600';" onmouseout="this.style.color='white';">Contact US</a></li>
+            </ul>
+        </div>
+
+        <!-- Credits Section -->
+        <div style="margin: 20px;">
+            <h3 style="color: #ff6600;">Credits</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;">ATHARVA SALUNKHE SATISH</li>
+                <li style="margin: 10px 0;">V kishore</li>
+              
+            </ul>
+        </div>
+
+        <!-- Social or Additional Section (Optional) -->
+        <div style="margin: 20px;">
+            <h3 style="color: #ff6600;">Connect</h3>
+            <p>Email: kishoreseervi04042006@gmail.com</p>
+            <p>Phone: +91-63826 02550</p>
+        </div>
+
+    </div>
+
+    <p style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: #aaa;">&copy; 2025 Sparez. All rights reserved.</p>
+
+</footer>
+
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
